@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+}
+
+#board {
+	width : 362px;
+	height: 362px;
+	margin: auto;
+	border: solid black 1px;
+}
+
+.square {
+	width : 120px;
+	height: 120px;
+	float : left;
+	border: solid black 1px;
+	font-size: 60px;
+	text-align: center;
+	line-height: 120px;	
+}
+
+.square:hover {
+	background-color: #e0e0e0;
+}
+
+.square.played:hover {
+	background-color: white;
+}
+
+.square.player1 {
+	color: blue;
+}
+
+.square.player2 {
+	color: red;
+}
+
+h1 {
+	text-align: center;
+	font: 500% "Marko One", serif;
+	margin-top: 50px;
+	line-height: 1.0;
+}
+
+button {
+	height: 50px;
+	width : 200px;
+	margin: 20px auto;
+	position: relative;
+	display: block;
+}
+
+#footer > p {
+	text-align: center;
+	font: 300% "Spirax", sans-serif;
+}
