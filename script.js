@@ -64,8 +64,20 @@ var Game = {
 		that.get_info();
 		that.render();
 		$('.square').click(function() {
-				if (this.classList.contains('played') == false) {
+			if (this.classList.contains('played') == false) {
 				that.game_turn(this);
+			}
+		});
+		$('.square').hover(function() {
+			if (this.classList.contains('played') == false) {
+				var turn_sign = false
+				if (that.turn % 2 == 1) turn_sign = that.player1.sign;
+				else                    turn_sign = that.player2.sign;
+				$(this).text(turn_sign);
+			}
+		}, function() {
+			if (this.classList.contains('played') == false) {
+				$(this).empty();
 			}
 		});
 	},
@@ -143,7 +155,6 @@ var Game = {
 				end = false;
 		});
 		if (end == true) { that.end_game(); return; }
-
 	},
 
 	end_game: function(p) {

@@ -2,6 +2,13 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	text-align: center;
+	font: 500% "Marko One", serif;
+	margin-top: 50px;
+	line-height: 1.0;
+}
+
 #board {
 	width : 362px;
 	height: 362px;
@@ -20,11 +27,12 @@
 }
 
 .square:hover {
-	background-color: #e0e0e0;
+	color: green;
+	cursor: pointer;
 }
 
 .square.played:hover {
-	background-color: white;
+	cursor: default;
 }
 
 .square.player1 {
@@ -35,19 +43,16 @@
 	color: red;
 }
 
-h1 {
-	text-align: center;
-	font: 500% "Marko One", serif;
-	margin-top: 50px;
-	line-height: 1.0;
-}
-
 button {
 	height: 50px;
 	width : 200px;
 	margin: 20px auto;
 	position: relative;
 	display: block;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 #footer > p {
